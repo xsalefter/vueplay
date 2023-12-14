@@ -1,3 +1,45 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+    margin: 0;
+    line-height: normal;
+}
+
+a {
+    color: #953185;
+    text-decoration-line: underline;
+}
+a:hover {
+    color: #bd7ab3;
+    text-decoration-line: none;
+}
+
+h1 {
+  @apply flex font-semibold;
+}
+
+h2 {
+  @apply flex font-medium text-[1.25rem];
+}
+
+.layout-row {
+  @apply w-full flex items-center py-[1rem] px-[1.5rem] box-border max-w-[80rem] font-normal;
+}
+
+.input {
+  @apply border border-gray-300 p-1 m-1 rounded-md;
+}
+
+input {
+  @apply input;
+}
+
+button[type='submit'] {
+  @apply input bg-blue-300;
+}
+
+button[type='reset'], button[type='button'] {
+  @apply input bg-amber-100;
+}
