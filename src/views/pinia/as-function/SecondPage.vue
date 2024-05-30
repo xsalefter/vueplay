@@ -20,7 +20,20 @@ import { usePersonStore } from '@/views/pinia/as-function/functionBasedPiniaStor
 import NoteSection from '@/views/pinia/as-function/NoteSection.vue'
 import LinkSection from '@/views/pinia/as-function/LinkSection.vue'
 import PersonTable from '@/views/pinia/as-function/PersonTable.vue'
+import router from '@/router'
 
 const personStore = usePersonStore();
 const persons = personStore.getPersons();
+
+setTimeout(() => {
+  if (!persons || persons.length === 0) {
+    return;
+  } else {
+    /** Person data will still there */
+    router.push('/pinia/as-function/3rd');
+
+    /** This will cause person data gone. */
+    // window.location.href = 'http://localhost:5174/pinia/as-function/3rd';
+  }
+}, 2000);
 </script>
