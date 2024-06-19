@@ -9,6 +9,7 @@
       <li>Inject / Provide</li>
       <ul>
         <li>- <router-link to="/inject-provide/basic/home">Basic</router-link></li>
+        <li>- <router-link to="/inject-provide/plugin/home">Plugin</router-link></li>
       </ul>
     </ul>
   </div>
